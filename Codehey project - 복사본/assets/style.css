@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'pcb';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2'); /*평창평화체*/
+}
+
+@font-face {
+    font-family: 'lotte_chab'; /*롯데 찹 글꼴*/
+    src: url('chab.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'lotte_ddag'; /*롯데 딱 글꼴*/
+    src: url('ddag.ttf') format('truetype'); 
+    
+  }
+  
+  @font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2'); /*오뮤 다예쁨체*/
+    font-weight: normal;
+    font-style: normal;
+}
+    .logo {
+      
+      font-family: 'pcb', sans-serif;
+      user-select: none; /* 드래그 기능 비활성화 */
+      -webkit-user-select: none; /* Chrome, Safari, Opera, Whale */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE, Edge */
+      position: relative; /* 위치 속성 추가 */
+      top: 1%; /* 상단에서 1% 아래 */
+      left: 100%; /* 왼쪽에서 10% 옆으로 */
+    }
+    
+
+    body {
+      font-family: 'omyu_pretty', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    a {
+      color: inherit; /* 상위 요소의 글자 색상을 상속 */
+      text-decoration: none; /* 밑줄 제거 */
+    }
+
+    a:hover, a:active, a:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: relative; /* 위치 속성 추가 */
+      top: 1%; /* 상단에서 1% 아래 */
+      right: 20%; /* 오른쪽에서 20% 옆으로 */
+    }
+
+    nav li button {
+      background-color: #ffffff; /* 버튼 배경색 지정 */
+      border: 2px solid #a1a1a1; /* 버튼 테두리 두께와 색상 지정 */
+      font-size: 16px; /* 글자 크기 지정 */
+      cursor:pointer; /* 마우스 포인터를 버튼 위에 올렸을 때 커서 모양 변경 */
+      font-family: 'lotte_chab', sans-serif;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+    
+    nav li button:hover {
+        background-color: rgb(198, 198, 198); /* 마우스 호버 시 버튼 배경색 변경 */
+      }
+    
+
+    nav li:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+
+    .outer-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    
+    .slide-container {
+      display: flex;
+      width: 200%;
+      position: relative;
+      transition: transform 1s ease;
+    }
+    
+    .slide {
+      width: 50%;
+    }
+    
+    .slide-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    
+    
+    .dot-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+    }
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }    
+    
+    .image-wrapper {
+      display: flex;
+      align-items: center; /* 세로 중앙 정렬 */
+      justify-content: center; /* 가로 중앙 정렬 */
+      height: 100%;
+    }
+
+    hr {
+      border: none;
+      width: 95%;
+      height: 2px;
+      background-color: rgb(167, 167, 167);
+    } 
+
+    .nanum {
+      border: none;
+      width: 98%;
+      height: 4px;
+      background-color: rgb(97, 97, 97);
+    }
+
+    .gongji {
+      font-family: 'omyu_pretty', sans-serif;
+      text-align: center;
+    }
+
+    .pagenotfound{
+      text-align: center;
+      font-family: 'pcb', sans-serif;
+    }
+
+    .developer{
+      text-align: center;
+      font-family: 'pcb', sans-serif;
+    }
+    
+
+    footer {
+      font-family: 'omyu_pretty', sans-serif;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+      background-color: #f8f8f8;
+      text-align: center;
+      user-select: none; /* 드래그 기능 비활성화 */
+      -webkit-user-select: none; /* Chrome, Safari, Opera, Whale */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE, Edge */
+    }
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeHey!</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+  <a href=""><h1 class="logo">CodeHey!</h1></a>
+    <nav>
+      <ul>
+        <a href="#"> <li><button>문의</button></li> </a>
+        <a href=""> <li><button>질문</button></li> </a>
+        <a href=""> <li><button>뉴스</button></li> </a>
+        <a href=""> <li><button>코딩 배우기</button></li> </a>
+        <a href=""> <li><button>사이트 개발자 정보</button></li> </a>
+        <a href=""> <li><button>팁</button></li> </a>
+        <a href=""> <li><button>사이트 맵</button></li> </a>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="outer-container">
+      <div class="slide-container">
+        <div class="slide">
+          <div class="image-wrapper">
+            <img src="assets/1sld.png" alt="이미지 로드 오류1!" class="slide-image">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="image-wrapper">
+            <img src="assets/2sld.png" alt="이미지 로드 오류2!" class="slide-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dot-container">
+      <div class="dot" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+    </div>
+    <hr class="nanum">
+    <h1 class="gongji">공지사항 📢</h1>
+    <hr class="nanum">
+    <a href="notice/2"><h3 class="gongji">아직 지원되는 기능은 없습니다. 메인만 구경해주세요-23.5.28</h3></a>
+    <hr>
+    <a href="notice/1"><h3 class="gongji">CodeHey 서비스 디플로이-23.5.28</h3></a>
+  </main>
+  
+  <footer>
+    <p>copyrightⓒ2023CodeHey</p>
+  </footer>
+
+
+  <script>
+    function isMobile() {
+  // navigator.userAgent 속성을 사용하여 기기가 모바일인지 확인합니다.
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+}
+
+  if (isMobile()) {
+    alert('현재 모바일은 사용할 수 없습니다. pc로 접속해주세요. (모바일 버전은 추후 추가할 예정)');
+    window.history.back();
+  }
+
+const slideContainer = document.querySelector('.slide-container');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function slideTo(index) {
+  currentIndex = index;
+  slideContainer.style.transform = `translateX(${-50 * currentIndex}%)`;
+  updateDots();
+}
+
+function updateDots() {
+  dots.forEach((dot, idx) => {
+    if (idx === currentIndex) {
+      dot.style.backgroundColor = 'black';
+    } else {
+      dot.style.backgroundColor = '#bbb';
+    }
+  });
+}
+
+dots.forEach((dot, idx) => {
+  dot.addEventListener('click', () => slideTo(idx));
+});
+
+// 3초마다 슬라이드 애니메이션이 실행되도록 설정.
+setInterval(() => {
+  slideTo((currentIndex + 1) % 2);
+}, 5000);
+
+  </script>
+</body>
+</html>
